@@ -1,7 +1,6 @@
-## 逻辑回归
+## 逻辑回归 LR
 
-[NLP-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/)
-
+[NLP-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/)
 ### 1. Logistic Regression 简述
 
 Logistic regression 用来解决二分类问题，它假设数据服从伯努利分布，即输出为**正 负**两种情况，概率分别为 p 和 1-p，**目标函数** `$h_θ(x;θ)$` 是对 p 的模拟，p 是个概率，这里用了 p＝sigmoid 函数，所以目标函数为：
@@ -138,7 +137,7 @@ z=w_1x_1+w_2x_2+...
 ```
 参数权重之间没有相互作用，没有像`$w_1*x_1*w_2*x_2$`那样，这样的模型是**非线性**的！
 
-#### 解释 2
+#### 解释 2 
 It's because the **decision boundary** is linear in x.
 
 具体地说，在这种情况下的**决策边界**（超平面）由`$w^Tx=0$`给出（类似于支持向量机（SVM）在正例和反例之间的函数/几何边界）。
@@ -177,15 +176,15 @@ P(Y=K|x)=\frac{1}{1+\sum_{k=1}^K\exp(w_k·x)}
 </p>
 
 > OvO的优点是，在类别很多时，训练时间要比OvR少。缺点是，分类器个数多。
->
+> 
 > OvR的优点是，分类器个数少，存储开销和测试时间比OvO少。缺点是，类别很多时，训练时间长。
 
 - `MvM`是每次将若干个类作为正类，若干个其他类作为反类。显然，`OvO`和`OvR`是`MvM`的特例。MvM的正、反类构造必须有特殊的设计，不能随意选取。这里我们介绍一种最常用的`MvM`技术"纠错输出码" (Error Correcting Output Codes，简称`ECOC`)。
 
 > `ECOC`是将编码的思想引入类别拆分，并尽可能在解码的过程中具有容错性。`ECOC`工作过程主要分为两步：
->
+> 
 > 1. 编码：对`N`个类别做`M`次划分，每次划分将一部分类别划为正类，一部分划为反类，从而形成一个二分类训练集，这样一共产生`M`个训练集，可训练出`M`个训练器。
->
+> 
 > 2. 解码：`M`个分类器分别对测试样本进行预测，这些预测标记组成一个编码。将这个与此编码与每个类别各自的编码进行比较，返回其中距离最小的类别最为最终预测结果。
 
 <p align="center">
