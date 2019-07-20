@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 ## 逻辑回归 LR
 
 [NLP-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/)
+=======
+## 逻辑回归
+
+[人工智能-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/machine-learning-interview-qa/)
+
+>>>>>>> 84295ce427fa72079296b33c5410891b5828db10
 ### 1. Logistic Regression 简述
 
 Logistic regression 用来解决二分类问题，它假设数据服从伯努利分布，即输出为**正 负**两种情况，概率分别为 p 和 1-p，**目标函数** `$h_θ(x;θ)$` 是对 p 的模拟，p 是个概率，这里用了 p＝sigmoid 函数，所以目标函数为：

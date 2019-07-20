@@ -1,6 +1,10 @@
 ## 精确率(precision)和召回率(recall)
 
+<<<<<<< HEAD
 [NLP-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/)
+=======
+[人工智能-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/machine-learning-interview-qa/)
+>>>>>>> 84295ce427fa72079296b33c5410891b5828db10
 
 混淆矩阵
 
