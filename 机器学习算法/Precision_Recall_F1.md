@@ -10,26 +10,26 @@
 - True Negative(真反例, TN)：将负类预测为负类数.
 
 <p align="center">
-<table>
-  <tr>
-    <th rowspan="2"><br>真实情况</th>
-    <th colspan="2">预测结果</th>
-  </tr>
-  <tr>
-    <td>正例 Positive</td>
-    <td>反例 Negative</td>
-  </tr>
-  <tr>
-    <td>正例 True</td>
-    <td>True Positive (TP)</td>
-    <td>True Negative (TN)</td>
-  </tr>
-  <tr>
-    <td>反例 False</td>
-    <td>False Positive (FP)</td>
-    <td>False Negative (FN)</td>
-  </tr>
-</table>
+  <table>
+    <tr>
+      <th rowspan="2"><br>真实情况</th>
+      <th colspan="2">预测结果</th>
+    </tr>
+    <tr>
+      <td>正例 Positive</td>
+      <td>反例 Negative</td>
+    </tr>
+    <tr>
+      <td>正例 True</td>
+      <td>True Positive (TP)</td>
+      <td>True Negative (TN)</td>
+    </tr>
+    <tr>
+      <td>反例 False</td>
+      <td>False Positive (FP)</td>
+      <td>False Negative (FN)</td>
+    </tr>
+  </table>
 </p>
 
 **精确率**(precision)定义为：
