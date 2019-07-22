@@ -194,4 +194,4 @@ P(Y=K|x)=\frac{1}{1+\sum_{k=1}^K\exp(w_k·x)}
 
 ### Q4. 逻辑回归模型推导
 
-[见Logistic Regression简述](http://note.youdao.com/noteshare?id=f13ce3b593a4a8b55909d1eee8fff4c8&sub=8A27C7DCB0224437AD99C7068D5D0313)
+[见Logistic Regression简述](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/blob/master/机器学习算法/逻辑回归LR.md)
