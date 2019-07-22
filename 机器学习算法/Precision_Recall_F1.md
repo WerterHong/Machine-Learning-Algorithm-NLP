@@ -9,6 +9,7 @@
 - False Positive(假正例, FP)：将负类预测为正类数 → 误报 (Type I error).
 - True Negative(真反例, TN)：将负类预测为负类数.
 
+<p align="center">
 <table>
   <tr>
     <th rowspan="2"><br>真实情况</th>
@@ -29,8 +30,9 @@
     <td>False Negative (FN)</td>
   </tr>
 </table>
+</p>
 
-精确率(precision)定义为：
+**精确率**(precision)定义为：
 
 ```math
 Precision=\frac{TP}{TP+FP}
@@ -45,13 +47,13 @@ Accuracy=\frac{TP}{TP+TN+FP+FN}
 
 在正负样本不平衡的情况下，准确率这个评价指标有很大的缺陷。比如在互联网广告里面，点击的数量是很少的，一般只有千分之几，如果用acc，即使全部预测成负类（不点击）acc 也有 99% 以上，没有意义。
 
-召回率(recall, sensitivity, true positive rate)定义为：
+**召回率**(recall, sensitivity, true positive rate)定义为：
 
 ```math
 Recall=\frac{TP}{TP+FN}
 ```
 
-此外，还有`$F1$`值，是精确率和召回率的调和均值，
+此外，还有`$F1$`值，是**精确率和召回率的调和均值**，
 
 ```math
 \frac{2}{F_1}=\frac{1}{Precision}+\frac{1}{Recall}
