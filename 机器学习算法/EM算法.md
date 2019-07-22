@@ -1,4 +1,4 @@
-## EM算法 
+## EM算法
 
 [NLP-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/)
 
@@ -12,7 +12,7 @@
 
 最大期望算法图：
 <p align="center">
-<img src="../img/EM-2.jpg" />
+<img src="../img/EM-2.jpg" width="600 "/>
 </p>
 
 ### EM算法推导
