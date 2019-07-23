@@ -37,13 +37,13 @@
 **精确率**(precision)定义为：
 
 <p align="center">
-<img src="../img/P-R-F1/PRF1-1.jpg" width="600" />
+<img src="../img/P-R-F1/PRF1-1.png" width="600" />
 </p>
 
 需要注意的是精确率(precision)和准确率(accuracy)是不一样的，
 
 <p align="center">
-<img src="../img/P-R-F1/PRF1-2.jpg" width="600" />
+<img src="../img/P-R-F1/PRF1-2.png" width="600" />
 </p>
 
 其中`TP+TN+FP+FN=样本总例`。
@@ -53,18 +53,18 @@
 **召回率**(recall, sensitivity, true positive rate)定义为：
 
 <p align="center">
-<img src="../img/P-R-F1/PRF1-3.jpg" width="600" />
+<img src="../img/P-R-F1/PRF1-3.png" width="600" />
 </p>
 
 
 此外，还有`$F1$`值，是**精确率和召回率的调和均值**，
 
 <p align="center">
-<img src="../img/P-R-F1/PRF1-4.jpg" width="600" />
+<img src="../img/P-R-F1/PRF1-4.png" width="600" />
 </p>
 
 <p align="center">
-<img src="../img/P-R-F1/PRF1-5.jpg" width="600" />
+<img src="../img/P-R-F1/PRF1-5.png" width="600" />
 </p>
 
 精确率和准确率都高的情况下，`F1`值也会高。
