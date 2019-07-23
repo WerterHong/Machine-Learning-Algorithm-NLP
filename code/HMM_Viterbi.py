@@ -4,54 +4,61 @@
 Aim：实现隐马尔科夫模型的维特比算法(Viterbi Algorithm)
 """
 import numpy as np
-def viterbi_algorithm(A, B, pai, O):
-    N = np.shape(A)[0] #隐马尔科夫模型状态个数
-    T = np.shape(O)[0] #观测序列的观测个数，即时刻个数
-    delta = np.zeros((T,N))#每个时刻每个状态对应的局部最优状态序列的概率数组
-    psi = np.zeros((T,N))#每个时刻每个状态对应的局部最优状态序列的前导状态索引数组
-    #(1)viterbi algorithm
-    for t in range(T):#[0,1,...,T-1]
-        if 0 == t:#计算初值
-            delta[t] = np.multiply(pai.reshape((1, N)), np.array(B[:,O[t]]).reshape((1, N)))
-            continue
-        for i in range(N):
-            delta_t_i = np.multiply(np.multiply(delta[t-1], A[:,i]), B[i, O[t]])
-            delta[t,i] = max(delta_t_i)
-            psi[t][i] = np.argmax(delta_t_i)
-    states = np.zeros((T,))
-    t_range = -1 * np.array(sorted(-1*np.arange(T)))
-    for t in t_range:
-        if T-1 == t:
-            states[t] = np.argmax(delta[t])
+from numpy import *
+import math
+
+def viterbi(A, B, PI, O):
+    N = shape(A)[0]
+    I = mat(zeros((N, 1)))
+    T = N
+    sigma = mat(zeros((N, N)))
+    omiga = mat(ones((N, N)))
+    index = 0
+
+    for i in range(N):
+        if(O[0, 0] == 0):
+            index = 0
         else:
-            states[t] = psi[t+1, int(states[t+1])]
-    print('局部最优状态的概率分布图:\n', delta)
-    print('局部最优状态的前时刻状态索引图:\n', psi)
-    print('最优状态序列:', states)
-    return states
+            index = 1
+        sigma[0, i] = PI[i, 0] * B[i, index]
 
-def HMM_Viterbi():
-    #隐马尔可夫模型λ=(A, B, pai)
-    #A是状态转移概率分布，状态集合Q的大小N=np.shape(A)[0]
-    #从下给定A可知：Q={盒1, 盒2, 盒3}, N=3
-    A = np.array([[0.5, 0.2, 0.3],
-                  [0.3, 0.5, 0.2],
-                  [0.2, 0.3, 0.5]])
-    #B是观测概率分布，观测集合V的大小T=np.shape(B)[1]
-    #从下面给定的B可知：V={红，白}，T=2
-    B = np.array([[0.5, 0.5],
-                  [0.4, 0.6],
-                  [0.7, 0.3]])
-    #pai是初始状态概率分布，初始状态个数=np.shape(pai)[0]
-    pai = np.array([[0.2],
-                    [0.4],
-                    [0.4]])
+    t = 1
+    while(t < T):
+        for i in range(N):
+            sigma_temp = mat(zeros((N, 1)))
+            for j in range(N):
+                sigma_temp[j, 0] = sigma[t - 1, j] * A[j, i]
+            max_value = sigma_temp.max(axis = 0)
+            if(O[t, 0] == 0):
+                index = 0
+            else:
+                index = 1
+            sigma[t, i] = max_value[0, 0] * B[i, index]
+            omiga[t, i] = sigma_temp.argmax() + 1
+        t += 1
+    P = sigma[N - 1, :].max()
+    I[T -1, 0] = sigma[N - 1, :].argmax() + 1
+    t = T - 2
 
-    #观测序列
-    O = np.array([[0],
-                  [1],
-                  [0]]) #0表示红色，1表示白，就是(红，白，红)观测序列
-    viterbi_algorithm(A,B,pai,O)
+    print(omiga)
+    while(t >= 0):
+        index = int(I[t + 1, 0] - 1)
+        I[t, 0] = omiga[t + 1, index]
+        t -= 1
+    return I
 
-if __name__=='__main__':
-    HMM_Viterbi()
+if __name__ == "__main__":
+    A = mat([[0.5, 0.2, 0.3],
+             [0.3, 0.5, 0.2],
+             [0.2, 0.3, 0.5]])
+    B = mat([[0.5, 0.5],
+             [0.4, 0.6],
+             [0.7, 0.3]])
+    PI = mat([[0.2],
+              [0.4],
+              [0.4]])
+    O = mat([[0],
+             [1],
+             [0]])
+    I = viterbi(A, B, PI, O)
+    print(I)

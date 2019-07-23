@@ -186,17 +186,103 @@
 
 根据动态规划原理，最优路径具有这样的特性：如果最优路径在时刻`t`通过节点`$i^*_t$`，那么这一路径从节点`$i^*_t$`到终点`$i^*_T$`的部分路径，对于从`$i^*_t$`到`$i^*_T$`的所有可能的部分路径来说，必须是最优的。
 
-首先导入两个变量`$δ(delta)$`和`$ψ(psi)$`，在时刻`t`状态为`i`的所有单个路径`$(i_1, i_2, ..., i_t)$`中概率最大值为:
+首先导入两个变量`δ(delta)`和`ψ(psi)`，在时刻`t`状态为`i`的所有单个路径`$(i_1, i_2, ..., i_t)$`中概率最大值为:
 
 <p align="center">
 <img src="../img/HMM/HMM-1.png" />
 </p>
 
-#### Q1：隐马尔科夫模型适用范围？
+由定义可得变量`δ`的递推公式：
+
+<p align="center">
+<img src="../img/HMM/HMM-19.png" />
+</p>
+
+定义在时刻`t`状态为`i`的所有单个路径`$(i_1, t_2,...,i_{t-1},i)$`中概率最大的路径的第`t-1`个节点为：
+
+<p align="center">
+<img src="../img/HMM/HMM-20.png" />
+</p>
+
+##### >举个栗子<
+
+(**维特比算法**)考虑盒子和球模型`λ=(A,B,π)`，状态集合`Q={1,2,3}`，观测集合`V={红,白}`，
+
+<p align="center">
+<img src="../img/HMM/HMM-5.png" />
+</p>
+
+设`T=3`，`O={红,白,红}`，试求最优状态序列，及最优路径`$I^*=\{i^*_1, i^*_2, i^*_3\}$`.
+
+**解**
+
+(1) 初始化。在`t=1`时，对每个状态`i`，`i=1,2,3`，求状态为`i`观测`$o_1$`为红色的概率`$δ_1(i)$`:
+
+<p align="center">
+<img src="../img/HMM/HMM-21.png" />
+</p>
+
+代入实际数据
+
+<p align="center">
+<img src="../img/HMM/HMM-22.png" />
+</p>
+
+记
+
+<p align="center">
+<img src="../img/HMM/HMM-23.png" />
+</p>
+
+(2) 递推。在`t=2`时，对每个状态`i`，`i=1,2,3`，求在`t=1`时状态为`j`观测为红并在`t=2`时状态为`i`观测`$o_2$`为白的路径的最大概率`$δ_2(i)$`：
+
+<p align="center">
+<img src="../img/HMM/HMM-24.png" />
+</p>
+
+同时，对每个状态`i`，`i=1,2,3`，记录概率最大路径的前一个状态`j`：
+
+<p align="center">
+<img src="../img/HMM/HMM-25.png" />
+</p>
+
+计算：
+
+<p align="center">
+<img src="../img/HMM/HMM-26.png" />
+</p>
+
+同样，在`t=3`时，
+
+<p align="center">
+<img src="../img/HMM/HMM-27.png" />
+</p>
+
+(3) 终止。以`P^*`表示最优路径的概率，则：
+
+<p align="center">
+<img src="../img/HMM/HMM-28.png" />
+</p>
+
+最优路径的终点是`$i^*_3$`:
+
+<p align="center">
+<img src="../img/HMM/HMM-29.png" />
+</p>
+
+(4) 最优路径回溯。由最优路径的终点是`$i^*_3$`，逆向找到`$i^*_2，i^*_1$`：
+
+<p align="center">
+<img src="../img/HMM/HMM-30.png" />
+</p>
+
+于是求得最优路径，即最优状态序列`$I^*=(i^*_1,i^*_2,i^*_3)=(3,3,3)$`。
+
+### Q1：隐马尔科夫模型适用范围？
 
 1. 我们的问题是基于序列的，比如时间序列，或者状态序列。
 2. 我们的问题中有两类数据，一类序列数据是可以观测到的，即观测序列；而另一类数据是不能观察到的，即隐藏状态序列，简称状态序列。
 
-#### Q2：Viterbi算法 编程
+### Q2：Viterbi算法 编程
 
 [源码见Github.](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/blob/master/code/HMM_Viterbi.py)
