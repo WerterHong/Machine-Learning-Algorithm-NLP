@@ -1,7 +1,6 @@
 
 # -*- coding: utf-8 -*-
 """
-Github: https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/code/HMM_Viterbi.py
 Aim：实现隐马尔科夫模型的维特比算法(Viterbi Algorithm)
 """
 import numpy as np
