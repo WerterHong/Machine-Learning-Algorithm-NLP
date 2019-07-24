@@ -288,3 +288,23 @@
 ### Q2：Viterbi算法 编程
 
 [源码见Github.](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/blob/master/code/HMM_Viterbi.py)
+
+### Q3：隐马尔科夫模型的三个重要假设
+
+1. 马尔可夫假设（构成1阶马尔可夫链）
+
+<p align="center">
+<img src="../img/HMM/HMM-31.png" />
+</p>
+
+2. 不动性假设（状态与具体时间无关）
+
+<p align="center">
+<img src="../img/HMM/HMM-32.png" />
+</p>
+
+3. 输出独立性假设（输出仅与当前状态有关）
+
+<p align="center">
+<img src="../img/HMM/HMM-33.png" />
+</p>
