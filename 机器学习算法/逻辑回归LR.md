@@ -73,7 +73,7 @@ h_{\theta}(x)=g\left(\theta^{T} \mathbf{x}\right)
 几种损失函数的曲线：
 
 <p align="center">
-<img src="https://ask.qcloudimg.com/http-save/yehe-1000059/78f5qr65z0.png?imageView2/2/w/1620" />
+<img src="../img/StatisticalLearning/Loss-Function.png" />
 </p>
 
 - 黑色：`0-1`损失函数
