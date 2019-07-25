@@ -2,8 +2,6 @@
 
 [NLP-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/)
 
-[逻辑回归-有道云笔记](http://note.youdao.com/noteshare?id=eb07e5c345811d5ce8374097a63f820d&sub=22565B3DE3F74ADCA35D71663998C79D)
-
 ### 1. Logistic Regression 简述
 
 Logistic regression 用来解决二分类问题，它假设数据服从伯努利分布，即输出为**正 负**两种情况，概率分别为`p`和 `1-p`，**目标函数** `$h_θ(x;θ)$` 是对`p`的模拟，`p`是个概率，这里用了 `p＝sigmoid` 函数，所以目标函数为：
@@ -78,11 +76,11 @@ h_{\theta}(x)=g\left(\theta^{T} \mathbf{x}\right)
 <img src="https://ask.qcloudimg.com/http-save/yehe-1000059/78f5qr65z0.png?imageView2/2/w/1620" />
 </p>
 
-- 黑色：Gold Stantard
-- 绿色：Hinge Loss中，当 yf(x)>1 时，其损失=0，当 yf(x)<1时，其损失呈线性增长（正好符合svm的需求）
-- 红色 Log、蓝色 Exponential： 在 Hinge的左侧都是凸函数，并且Gold Stantard损失为它们的下界
+- 黑色：`0-1`损失函数
+- 绿色：合页损失函数`Hinge Loss`中，当`yf(x)>1`时，其损失`=0`，当 `yf(x)<1`时，其损失呈线性增长（正好符合`svm`的需求）
+- 红色为逻辑损失`Log`、蓝色为指数损失 `Exponential`： 在 合页`Hinge`的左侧都是凸函数，并且`0-1`损失为它们的下界
 
-要求最大似然时(即概率最大化)，使用Log Loss最合适，一般会加上负号，变为求最小。损失函数的凸性及有界很重要，有时需要使用代理函数来满足这两个条件。
+要求最大似然时(即概率最大化)，使用`Log Loss`最合适，一般会加上负号，变为求最小。损失函数的凸性及有界很重要，有时需要使用代理函数来满足这两个条件。
 
 ### Q1. LR损失函数为什么用极大似然函数
 
