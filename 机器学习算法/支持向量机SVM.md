@@ -1,6 +1,6 @@
 ## 支持向量机 SVM
 
-[NLP-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/)
+- NLP-机器学习笔试面试题解析 [Github链接](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/)
 
 ### Q1: 函数间隔/几何间隔
 

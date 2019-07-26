@@ -1,6 +1,6 @@
 ## EM算法
 
-[NLP-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/)
+- NLP-机器学习笔试面试题解析 [Github链接](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/)
 
 [EM算法-有道云笔记](http://note.youdao.com/noteshare?id=84052b8032023304deb8f159ed529fcd&sub=D022D38477F9432C9D1FD623324304ED)
 

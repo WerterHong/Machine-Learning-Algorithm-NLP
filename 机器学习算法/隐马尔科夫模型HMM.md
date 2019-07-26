@@ -1,6 +1,6 @@
 ## 隐马尔科夫模型 HMM
 
-[NLP-机器学习笔试面试题解析]Github链接(https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/)
+- NLP-机器学习笔试面试题解析 [Github链接](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/)
 
 [隐马尔科夫模型HMM-有道云笔记](http://note.youdao.com/noteshare?id=6ebba528b845b6d13a37d8d0f4b21f4f&sub=7C5940CA057B4D1280E774B3B7165F41)
 
