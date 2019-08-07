@@ -1,7 +1,7 @@
 ## 逻辑回归 LR
 
 - NLP-机器学习笔试面试题解析 [Github链接](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/)
-- **逻辑回归 LR** [有道云笔记](http://note.youdao.com/noteshare?id=eb07e5c345811d5ce8374097a63f820d&sub=22565B3DE3F74ADCA35D71663998C79D)
+- **逻辑回归 LR** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=eb07e5c345811d5ce8374097a63f820d&sub=22565B3DE3F74ADCA35D71663998C79D)
 
 ### 1. Logistic Regression 简述
 
@@ -74,7 +74,7 @@ h_{\theta}(x)=g\left(\theta^{T} \mathbf{x}\right)
 几种损失函数的曲线：
 
 <p align="center">
-<img src="../img/StatisticalLearning/Loss-Function.png" />
+<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/B1DFA02B5A8142BDB89BBB87ECAF9CCF?ynotemdtimestamp=1564217457782" />
 </p>
 
 - 黑色：`0-1`损失函数
@@ -101,19 +101,19 @@ Logistic regression is considered a generalized linear model because **the outco
 逻辑回归主要解决二分类问题。逻辑回归的输出是一个概率，它代表了一个样本属于类别`1`或者类别`0`。我们的目标函数是最小化逻辑函数`$\Phi()$`（sigmoid函数）：
 
 <p align="center">
-<img src="https://qph.fs.quoracdn.net/main-qimg-7c9b7670c90b286160a88cb599d1b733.webp" />
+<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/97E25FE01F7C438C8DD246F071DC7946?ynotemdtimestamp=1564217457782" />
 </p>
 
 虽然逻辑回归的结果是一个线性决策平面（将样本分为类别`1`或者类别`0`，如下图），但是逻辑（激活）函数看起来并不是线性的？
 
 <p align="center">
-<img src="https://qph.fs.quoracdn.net/main-qimg-6718d32785c4b612b6182f52752f24f8.webp" />
+<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/BEA65B6F2DBB48A3857EE4E83890AA2E?ynotemdtimestamp=1564217457782" />
 </p>
 
 在神经网络中，网络的输入函数是输入特征`$x_i$`和对应的模型系数`$w_i$`之间的点乘（dot product）：
 
 <p align="center">
-<img src="https://qph.fs.quoracdn.net/main-qimg-aa4696625ffb41dab0c6ab17d6940275.webp" />
+<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/39DF272936A2428B8DCE2C7DA8FE3672?ynotemdtimestamp=1564217457782" />
 </p>
 
 ```math
@@ -190,7 +190,7 @@ P(Y=K|x)=\frac{1}{1+\sum_{k=1}^K\exp(w_k·x)}
 > 2. 解码：`M`个分类器分别对测试样本进行预测，这些预测标记组成一个编码。将这个与此编码与每个类别各自的编码进行比较，返回其中距离最小的类别最为最终预测结果。
 
 <p align="center">
-<img src="https://upload-images.jianshu.io/upload_images/11128682-948469e8e1e2b2a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/796/format/webp" width="600" />
+<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/4AC198B7EE0E4B74BC62B968BAD376F1?ynotemdtimestamp=1564217457782" width="600" />
 </p>
 
 ### Q4. 逻辑回归模型推导

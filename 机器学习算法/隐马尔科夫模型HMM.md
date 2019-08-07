@@ -1,13 +1,13 @@
 ## 隐马尔科夫模型 HMM
 
 - NLP-机器学习笔试面试题解析 [Github链接](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/)
-- **隐马尔科夫模型 HMM** [有道云笔记](http://note.youdao.com/noteshare?id=6ebba528b845b6d13a37d8d0f4b21f4f&sub=7C5940CA057B4D1280E774B3B7165F41)
+- **隐马尔科夫模型 HMM** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=6ebba528b845b6d13a37d8d0f4b21f4f&sub=7C5940CA057B4D1280E774B3B7165F41)
 
 ### 1. 隐马尔科夫模型简述
 
 隐马尔科夫模型(`hidden Markov model, HMM`)是关于时序的概率模型，描述由一个**隐藏的马尔可夫链**随机生成**不可观测状态随机序列**，再由各个状态生成一个观测而产生**观测随机序列**的过程。
 
-`HMM`是一个**生成模型**表示状态序列和观测序列的联合分布，但是状态序列是隐藏的，不可观测的。
+`HMM`是一个**生成模型**，表示状态序列和观测序列的联合分布，但是状态序列是隐藏的，不可观测的。
 
 <p align="center">
 <img src="../img/HMM/HMM-34.png" />
