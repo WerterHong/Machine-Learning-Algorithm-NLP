@@ -267,7 +267,7 @@ p(足球|context(足球))=\prod_{j=2}^{5} p\left(d_{j}^{w} | \mathbf{x}_{w}, \th
 
 ### 4. 基于Negative Sampling的模型
 
-`Negative Sampling`目的是==提高训练速度==并==改善所得词向量的质量==，不使用`Huffman`树，而是蚕蛹相对简单的==随机负采样==。
+`Negative Sampling`目的是==提高训练速度==并==改善所得词向量的质量==，不使用`Huffman`树，而是采用相对简单的==随机负采样==。
 
 #### 4.1 负采样算法
 
@@ -307,7 +307,7 @@ Table(i)=w_{k}, \quad \text { where } \quad m_{i} \in I_{k}, \quad i=1,2, \cdots
 
 每次生成一个`[1,M-1]`间的随机整数`r`，`Table(r)`就是一个样本。
 
-> Q: 对`w_i`进行负采样时，如果碰巧选到`w_i`自己，怎么办？
+> Q: 对`$w_i$`进行负采样时，如果碰巧选到`$w_i$`自己，怎么办？
 >
 > A: 跳过去呗！
 
@@ -380,3 +380,23 @@ p(z | w)=\left\{\begin{array}{ll}{\sigma\left(\mathbf{v}(w)^{\top} \theta^{z}\ri
 p(z | w)=\left[\sigma\left(\mathbf{v}(w)^{\top} \theta^{z}\right)\right]^{L^{u}(z)} \cdot\left[1-\sigma\left(\mathbf{v}(w)^{\top} \theta^{z}\right)\right]^{1-L^{u}(z)}
 ```
 接下来的梯度计算与参数更新与`CBOW`模型一致。
+
+#### Q：`n-gram`模型对于长文本分类有优势么？
+Ans：
+- 假如我们词表的大小是50万，则要覆盖所有的`bigram`情况，需要至少2500亿个词的语料，参数必然也是这个数量级；对于`trigram（n=3）`以及更大的`n`，还会更大，显然这是不现实的
+- 很多的词不会相邻出现，即大部分`$P(w_i|w^{i-1}_{i-n+1})=0$`(==稀疏==)，另外，还有很多训练语料中不存在(`OOV, Out-of-vocabulary`) 的词
+- 如果训练语料数量不够大，或者词表不够全，得到的语言模型容易出现==过拟合==
+
+解决方法：
+
+- `Laplace Smoothing (add-one, add-α)`
+- `Good-Turing Smoothing`
+- `Backoff (Katz)`
+- `Interpolation（Jelinek-Mercer）`
+- `Recursive Interpolation`
+- `Absolute Discounting`
+- `Witten-Bell Smoothing`
+- `Kneser-Ney discounting`
+- `Stupid Backoff(Google)`
+
+详情见[`language-models.pdf`](http://www.statmt.org/book/slides/07-language-models.pdf)。
