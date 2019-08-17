@@ -1,0 +1,181 @@
+目录结构：
+│  README.md
+│  tree.text
+│  tree.txt
+│  归一化、标准化和正则化.md
+│  评估与类别.md
+│
+├─code
+│      cal_min_var.py
+│      DBscan.py
+│      Decision_Tree_Regression.py
+│      HMM_Viterbi.py
+│      K_means.py
+│      PCA.py
+│      sklearn_PCA.py
+│      t_SNE.py
+│
+├─img
+│  │  convex-function.png
+│  │  normalization.png
+│  │  scaling.png
+│  │  standardization.png
+│  │  z-acore.jpg
+│  │
+│  ├─ActivationFunction
+│  │      ELU.png
+│  │      heaviside_step.png
+│  │      leaky_relu.png
+│  │      linear.png
+│  │      relu_derivative.png
+│  │      sigmoid_derivative.jpg
+│  │      tanh_gerivative.jpg
+│  │
+│  ├─BP
+│  │      Extreme.png
+│  │      FeedBack.png
+│  │      GDvsSGD.png
+│  │      step.png
+│  │
+│  ├─Clustering
+│  │      dbscan.gif
+│  │      dbscan_result.png
+│  │      dbscan_search.gif
+│  │      gaussian_em.gif
+│  │      gaussian_result.png
+│  │      Gaussian_t_SNE.png
+│  │      Gaussian_t_SNE_1.png
+│  │      hierarch.gif
+│  │      hierarch_connectivity.png
+│  │      hierarch_linkage.gif
+│  │      hierarch_result.png
+│  │      init.png
+│  │      kmeans.gif
+│  │      kmeans_bad.gif
+│  │      kmeans_result.png
+│  │      KNN.png
+│  │      t-SNE.png
+│  │
+│  ├─DecisionTree
+│  │      DTree-1.png
+│  │      DTree-2.png
+│  │      DTree-3.png
+│  │      DTree-4.png
+│  │      DTree-sklearn.png
+│  │      DTree-type.png
+│  │
+│  ├─EM
+│  │      EM-1.jpg
+│  │
+│  ├─Entropy
+│  │      KL-2.png
+│  │
+│  ├─HMM
+│  │      HMM-34.png
+│  │
+│  ├─LR
+│  │      LR-SGD.jpg
+│  │      MvM.jpg
+│  │      NN.jpg
+│  │      OvR.png
+│  │      sigmoid.jpg
+│  │
+│  ├─NaiveBayes
+│  ├─NN
+│  │      CNN-conv.gif
+│  │      CNN-fc.png
+│  │      CNN-filter.png
+│  │      CNN-onvolution.gif
+│  │      CNN-pooling.jpg
+│  │      CNN-stride.jpeg
+│  │      CNN.png
+│  │      Derivative.jpg
+│  │      gru.png
+│  │      LSTM-1.png
+│  │      LSTM-cell.png
+│  │      LSTM-forget.png
+│  │      LSTM-input.png
+│  │      LSTM-output.png
+│  │      LSTM.png
+│  │      OuHe.png
+│  │      peephole-connections.png
+│  │      RNN-input.gif
+│  │      RNN.png
+│  │
+│  ├─P-R-F1
+│  │      mAP.gif
+│  │      pr.jpg
+│  │
+│  ├─ParameterEstimation
+│  │      MLE-1.jpg
+│  │
+│  ├─Perceptron
+│  │      perceptron.png
+│  │      xor.jpg
+│  │
+│  ├─StatisticalLearning
+│  │      Loss-Function.png
+│  │      Statistical-Learning.png
+│  │
+│  ├─TopicModel
+│  │      dirichlet-distribution.png
+│  │      Dirichlet.gif
+│  │      Gamma-D.jpg
+│  │      Gamma.jpg
+│  │      LDA.png
+│  │      pLSA-Example.png
+│  │      pLSA.jpg
+│  │      PLSA.png
+│  │      pLSA_vs_LDA.jpg
+│  │      TM-1.png
+│  │      unigram.png
+│  │
+│  ├─Word2vec
+│  │      cbow-skip-gram.jpg
+│  │      CBOW.png
+│  │      Hierarchiral-softmax.png
+│  │      huffman-Tree.png
+│  │      NPLM.png
+│  │      NS-Mapping.png
+│  │      NS.jpg
+│  │      sigmoid.png
+│  │      Skip-gram.png
+│  │      word2vec.png
+│  │
+│  └─WordEmbedding
+│          BERT.jpg
+│          clipboard.png
+│          ELMo.jpg
+│          ELMo_OpenAIGPT_BERT.jpg
+│          fasttext.png
+│          GPT.png
+│          n-gram.png
+│          taglm.png
+│          weighting-function.png
+│
+├─NLP算法
+│      README.md
+│      Word2vec.md
+│      主题模型.md
+│      词向量.md
+│
+├─机器学习
+│      1_统计学习方法总结.md
+│      2_机器学习流程.md
+│      EM算法.md
+│      README.md
+│      信息熵.md
+│      决策树.md
+│      参数估计.md
+│      感知机.md
+│      支持向量机SVM.md
+│      朴素贝叶斯.md
+│      聚类与降维.md
+│      逻辑回归LR.md
+│      隐马尔科夫模型HMM.md
+│
+└─深度学习
+        BP算法.md
+        激活函数.md
+        神经网络.md
+
