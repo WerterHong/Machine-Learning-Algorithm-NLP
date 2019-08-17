@@ -1,18 +1,18 @@
 ## EM算法
 
 - NLP-机器学习笔试面试题解析 [Github链接](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/)
-- **EM算法** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=84052b8032023304deb8f159ed529fcd&sub=D022D38477F9432C9D1FD623324304ED)
+- **EM算法** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=fefebccc430e697e257cda8c603fca90&sub=8CFF2C512DBC4AA29FC01DC0742B91E5)
 
 ### 1. EM算法简介
 
-在[极大似然估计](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/极大似然估计.md)中，两枚硬币`A`和`B`正面的概率已经通过最大化似然函数得到。如果**抽取得到的硬币不知道是`A`还是`B`(隐性变量)**？即存在两个参数变量：一是抽取的硬币是`A`还是`B`？二是硬币抛出正面的概率是多少？
+在[极大似然估计](http://note.youdao.com/noteshare?id=6d598afab2f0f227f944c33d82aee9f1&sub=3D8340AC65EC4C44B03229D816D14996)中，两枚硬币`A`和`B`正面的概率已经通过最大化似然函数得到。如果**抽取得到的硬币不知道是`A`还是`B`(隐性变量)**？即存在两个参数变量：一是抽取的硬币是`A`还是`B`？二是硬币抛出正面的概率是多少？
 
 最大期望（EM）算法是在概率模型中寻找**参数最大似然估计**或者**最大后验估计**的算法，其中概率模型**依赖于**无法观测的**隐性变量**。
 
 最大期望算法图：
 
 <p align="center">
-    <img src="https://note.youdao.com/yws/public/resource/84052b8032023304deb8f159ed529fcd/5816BC49D5524BB98BEAE3AD3BB95BFE?ynotemdtimestamp=1565153188498" width="600" />
+    <img src="https://note.youdao.com/yws/public/resource/84052b8032023304deb8f159ed529fcd/5816BC49D5524BB98BEAE3AD3BB95BFE?ynotemdtimestamp=1565153188498" width="500" />
     <br/>
     <strong>Fig</strong>. EM 算法示例图
 </p>

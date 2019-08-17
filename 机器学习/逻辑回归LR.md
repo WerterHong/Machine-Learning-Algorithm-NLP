@@ -1,7 +1,7 @@
 ## 逻辑回归 LR
 
 - NLP-机器学习笔试面试题解析 [Github链接](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/)
-- **逻辑回归 LR** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=eb07e5c345811d5ce8374097a63f820d&sub=22565B3DE3F74ADCA35D71663998C79D)
+- **逻辑回归 LR** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=f13ce3b593a4a8b55909d1eee8fff4c8&sub=8A27C7DCB0224437AD99C7068D5D0313)
 
 ### 1. Logistic Regression 简述
 
