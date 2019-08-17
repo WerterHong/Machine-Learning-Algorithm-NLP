@@ -1,15 +1,15 @@
 ## Word2vec
 
 - NLP-机器学习笔试面试题解析 [Github链接](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/)
-- **word2vec** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=d3385e2e4599150c59a78cfd34abdfb6&sub=7516C8DB76FE4331B749885749BFE467)
+- **word2vec** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=2c44c1e114cab8b75824ad17073dfb43&sub=204349CD90724BC5B250A727857B11CF)
 
 `word2vec`工具主要包含两个模型：==跳字模型==（`skip-gram`）和==连续词袋模型==（`CBOW`），以及两种高效训练的方法：==负采样==（`negative sampling`）和==层序==`softmax`（`hierarchical softmax`）
 
 ### 1. 预备知识
 
-- [sigmiod函数](http://note.youdao.com/noteshare?id=61e22de3ed9ed9bb6d733fedf7245dbc&sub=81109D23317D485CA1FC1511699E9B6E)
-- [逻辑回归](http://note.youdao.com/noteshare?id=eb07e5c345811d5ce8374097a63f820d&sub=22565B3DE3F74ADCA35D71663998C79D)
-- [Bayes 公式](http://note.youdao.com/noteshare?id=0693c471d86002cc0bae2403a96e6632&sub=B89A3590BCC74A21BAA0183AE3418CDD)
+- [sigmiod函数](http://note.youdao.com/noteshare?id=7231cb5b2cc96c657bb5ad0d17b47b00&sub=FC472BF78D0C473CBA4AEE1EB824F95D)
+- [逻辑回归](http://note.youdao.com/noteshare?id=f13ce3b593a4a8b55909d1eee8fff4c8&sub=8A27C7DCB0224437AD99C7068D5D0313)
+- [Bayes 公式](http://note.youdao.com/noteshare?id=ac27ef1dee5d2396aa23a75a9ac5ad6c&sub=1E655DA14B454126B361F93AFA91E0EF)
 - Huffman树
 
 ### 2. 参考知识
@@ -237,7 +237,7 @@ p(足球|context(足球))=\prod_{j=2}^{5} p\left(d_{j}^{w} | \mathbf{x}_{w}, \th
 
 神经概率语言模型大部分计算集中在==隐藏层和输出层之间的矩阵向量运算==，以及输出层上的`softmax`==归一化向量运算==，而`CBOW`模型针对这些计算复杂度高的地方做了改变。
 
-**梯度计算**详情见 [逻辑回归LR](http://note.youdao.com/noteshare?id=eb07e5c345811d5ce8374097a63f820d&sub=22565B3DE3F74ADCA35D71663998C79D)
+**梯度计算**详情见 [逻辑回归LR](http://note.youdao.com/noteshare?id=f13ce3b593a4a8b55909d1eee8fff4c8&sub=8A27C7DCB0224437AD99C7068D5D0313)
 
 > Q: 采用平均贡献会不会更合理？即使用公式：
 
