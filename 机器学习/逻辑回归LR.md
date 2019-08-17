@@ -1,7 +1,7 @@
 ## 逻辑回归 LR
 
 - NLP-机器学习笔试面试题解析 [Github链接](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/)
-- **逻辑回归 LR** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=f13ce3b593a4a8b55909d1eee8fff4c8&sub=8A27C7DCB0224437AD99C7068D5D0313)
+- **逻辑回归 LR** (若公式显示错误，请点击此链接) [有道云笔记](http://note.youdao.com/noteshare?id=eb07e5c345811d5ce8374097a63f820d&sub=22565B3DE3F74ADCA35D71663998C79D)
 
 ### 1. Logistic Regression 简述
 
@@ -74,7 +74,7 @@ h_{\theta}(x)=g\left(\theta^{T} \mathbf{x}\right)
 几种损失函数的曲线：
 
 <p align="center">
-<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/B1DFA02B5A8142BDB89BBB87ECAF9CCF?ynotemdtimestamp=1564217457782" />
+<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/B1DFA02B5A8142BDB89BBB87ECAF9CCF?ynotemdtimestamp=1564217457782" width=500 />
 </p>
 
 - 黑色：`0-1`损失函数
@@ -101,7 +101,7 @@ Logistic regression is considered a generalized linear model because **the outco
 逻辑回归主要解决二分类问题。逻辑回归的输出是一个概率，它代表了一个样本属于类别`1`或者类别`0`。我们的目标函数是最小化逻辑函数`$\Phi()$`（sigmoid函数）：
 
 <p align="center">
-<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/97E25FE01F7C438C8DD246F071DC7946?ynotemdtimestamp=1564217457782" />
+<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/97E25FE01F7C438C8DD246F071DC7946?ynotemdtimestamp=1564217457782" width=500 />
 </p>
 
 虽然逻辑回归的结果是一个线性决策平面（将样本分为类别`1`或者类别`0`，如下图），但是逻辑（激活）函数看起来并不是线性的？
@@ -139,7 +139,7 @@ z=w_1x_1+w_2x_2+...
 ```
 参数权重之间没有相互作用，没有像`$w_1*x_1*w_2*x_2$`那样，这样的模型是**非线性**的！
 
-#### 解释 2
+#### 解释 2 
 It's because the **decision boundary** is linear in x.
 
 具体地说，在这种情况下的**决策边界**（超平面）由`$w^Tx=0$`给出（类似于支持向量机（SVM）在正例和反例之间的函数/几何边界）。
@@ -174,25 +174,25 @@ P(Y=K|x)=\frac{1}{1+\sum_{k=1}^K\exp(w_k·x)}
 - `OvR`则是每次将一个类的样例作为正例，所有其他类的样例作为反例来训练`N`个分类器，在测试时若仅有一个分类器预测为正类，则对应的类别标记作为最终分类结果。
 
 <p align="center">
-<img src="https://images2018.cnblogs.com/blog/1159663/201803/1159663-20180304193607996-1146250910.png" width="600" />
+<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/D9943407A3C44402909A25D65AE3CB99?ynotemdtimestamp=1566028689847" width="500" />
 </p>
 
 > OvO的优点是，在类别很多时，训练时间要比OvR少。缺点是，分类器个数多。
->
+> 
 > OvR的优点是，分类器个数少，存储开销和测试时间比OvO少。缺点是，类别很多时，训练时间长。
 
 - `MvM`是每次将若干个类作为正类，若干个其他类作为反类。显然，`OvO`和`OvR`是`MvM`的特例。MvM的正、反类构造必须有特殊的设计，不能随意选取。这里我们介绍一种最常用的`MvM`技术"纠错输出码" (Error Correcting Output Codes，简称`ECOC`)。
 
 > `ECOC`是将编码的思想引入类别拆分，并尽可能在解码的过程中具有容错性。`ECOC`工作过程主要分为两步：
->
+> 
 > 1. 编码：对`N`个类别做`M`次划分，每次划分将一部分类别划为正类，一部分划为反类，从而形成一个二分类训练集，这样一共产生`M`个训练集，可训练出`M`个训练器。
->
+> 
 > 2. 解码：`M`个分类器分别对测试样本进行预测，这些预测标记组成一个编码。将这个与此编码与每个类别各自的编码进行比较，返回其中距离最小的类别最为最终预测结果。
 
 <p align="center">
-<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/4AC198B7EE0E4B74BC62B968BAD376F1?ynotemdtimestamp=1564217457782" width="600" />
+<img src="https://note.youdao.com/yws/public/resource/eb07e5c345811d5ce8374097a63f820d/4AC198B7EE0E4B74BC62B968BAD376F1?ynotemdtimestamp=1564217457782" width="500" />
 </p>
 
 ### Q4. 逻辑回归模型推导
 
-[见Logistic Regression简述](https://github.com/WerterHong/Machine-Learning-Algorithm-NLP/tree/master/机器学习算法/逻辑回归LR.md)
+见`Logistic Regression`简述。
