@@ -1,16 +1,19 @@
-目录结构：
+Github目录：
+│  catalan数.md
 │  README.md
-│  tree.text
 │  tree.txt
 │  归一化、标准化和正则化.md
 │  评估与类别.md
 │
 ├─code
+│      cal_int.py
 │      cal_min_var.py
+│      catalan.py
 │      DBscan.py
 │      Decision_Tree_Regression.py
 │      HMM_Viterbi.py
 │      K_means.py
+│      max_substr.py
 │      PCA.py
 │      sklearn_PCA.py
 │      t_SNE.py
@@ -36,6 +39,12 @@
 │  │      FeedBack.png
 │  │      GDvsSGD.png
 │  │      step.png
+│  │
+│  ├─Catalan
+│  │      4_4.png
+│  │      Binary_tree.png
+│  │      Circle.jpg
+│  │      Hexagons.png
 │  │
 │  ├─Clustering
 │  │      dbscan.gif
