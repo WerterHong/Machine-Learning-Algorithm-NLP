@@ -4,6 +4,7 @@ Machine Learning Algorithm for NLP
 
 ```
 目录结构：
+│ Catalan数.md
 │ README.md
 │ 归一化、标准化和正则化.md
 │ 评估与类别.md
